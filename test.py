@@ -6,6 +6,7 @@ from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_requir
 
 app = Flask(__name__)
 
+
 # 模拟数据库表
 class User:
     def __init__(self, user_id, email, rsa_public_key):
