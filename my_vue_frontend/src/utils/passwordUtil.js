@@ -68,9 +68,9 @@ export function checkPassword (str){
     let strength = ''
     if (totalMark<25){ strength ='非常弱'
     }else if (totalMark >= 25 && totalMark < 50){strength ='弱'
-    }else if (totalMark >= 50 && totalMark < 60){strength = '一般'
-    }else if (totalMark >= 60 && totalMark < 70){strength ='强'
-    }else if (totalMark >= 70 && totalMark < 80){strength = '非常强'
+    }else if (totalMark >= 50 && totalMark < 60){strength = '比较弱'
+    }else if (totalMark >= 60 && totalMark < 70){strength ='一般'
+    }else if (totalMark >= 70 && totalMark < 80){strength = '强'
     }else if (totalMark >= 86 && totalMark < 90){strength = '安全'
     }else {strength ='非常安全'
     }

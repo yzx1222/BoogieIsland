@@ -3,7 +3,7 @@
 
     <div class="row">
       <div class="col-xs-offset-2 col-xs-8">
-        <div class="page-header"><h1>隐蔽通信系统</h1></div>
+        <div class="page-header"><h1>中传放心传</h1></div>
       </div>
     </div>
 
@@ -19,7 +19,7 @@
 					<router-link class="list-group-item" active-class="active" to="/logout">Logout</router-link>
           <router-link class="list-group-item" active-class="active" to="/posts">posts</router-link> -->
           <router-link class="list-group-item" active-class="active" to="/SignupForm">SignupForm</router-link>
-
+          <router-link class="list-group-item" active-class="active" to="/FileUpLoader">FileUpLoader</router-link>
         </div>
       </div>
 

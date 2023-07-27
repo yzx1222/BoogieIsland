@@ -5,7 +5,7 @@ import Router from 'vue-router'
 // 引入组件
 import LoginForm from '../components/LoginForm'
 import SignupForm from '../components/SignupForm'
-
+import FileUpLoader from '../components/FileUpLoader'
 // 创建并暴露一个路由器
 export default new Router({
     routes:[
@@ -16,6 +16,10 @@ export default new Router({
         {
             path:'/SignupForm',
             component:SignupForm
+        },
+        {
+            path:'/FileUpLoader',
+            component:FileUpLoader
         }
     ]
 })

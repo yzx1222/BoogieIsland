@@ -10,15 +10,15 @@
           <label for="password">Password:</label>
           <input type="password" id="password" v-model="password" @change="onPasswordChange" required>
         </div>
-        <div>
-          <span :class="(password &&(isOne||isTwo||isThree||isFour||isFive||isSix||isSeven))?'colorRed' : 'colorInit'">&nbsp;</span>
-          <span :class="(isTwo||isThree||isFour||isFive||isSix||isSeven)? 'colorRed' : 'colorInit'">&nbsp;</span>
-          <span :class="(isThree||isFour||isFive||isSix||isSeven)? 'colorOrange ' : 'colorInit'">&nbsp;</span>
-          <span :class="(isFour||isFive|isSix||isSeven)? 'colorOrange' : 'colorInit'"></span>
-          <span :class="(isFive||isSix||isSeven)? 'colorGreen': 'colorInit'"></span>
-          <span :class="(isSix|| isSeven)? 'colorGreen' : 'colorInit'"></span>
-          <span :class="isSeven? 'colorSafe' : 'colorInit'"></span>
-          <span v-show="password" class="left5"> {{psdStrength}} </span>
+        <div class="passwordstrength">
+          <div :class="(password &&(isOne||isTwo||isThree||isFour||isFive||isSix||isSeven))?'colorRed' : 'colorInit'"></div>
+          <div :class="(isTwo||isThree||isFour||isFive||isSix||isSeven)? 'colorRed2' : 'colorInit'"></div>
+          <div :class="(isThree||isFour||isFive||isSix||isSeven)? 'colorOrange ' : 'colorInit'"></div>
+          <div :class="(isFour||isFive|isSix||isSeven)? 'colorOrange2' : 'colorInit'"></div>
+          <div :class="(isFive||isSix||isSeven)? 'colorGreen': 'colorInit'"></div>
+          <div :class="(isSix|| isSeven)? 'colorGreen2' : 'colorInit'"></div>
+          <div :class="isSeven? 'colorSafe' : 'colorInit'"></div>
+          <div v-show="password" class="left5"> {{psdStrength}} </div>
         </div>
         <div class="form-group">
           <label for="confirm_password">Confirm Password:</label>
@@ -91,13 +91,13 @@
           case '弱':
             this.isTwo = true;
             break;
-          case '一般':
+          case '比较弱':
             this.isThree = true;
             break;
-          case '强':
+          case '一般':
             this.isFour = true;
             break;
-          case '非常强':
+          case '强':
             this.isFive = true;
             break;
           case '安全':
@@ -142,7 +142,10 @@
   .form-group {
     margin-bottom: 15px;
   }
-  
+  .passwordstrength{
+    display: flex;
+    background-color: #f5f5f5;
+  }
   label {
     font-weight: bold;
   }
@@ -184,22 +187,36 @@
   
   .colorRed {
     background-color: crimson;
+    width:20px;
   }
-  
+  .colorRed2 {
+    background-color: rgb(220, 127, 20);
+    width:20px;
+  }
   .colorOrange {
-    background-color: darkorange;
+    background-color: rgb(253, 218, 62);
+    width:20px;
   }
-  
+  .colorOrange2 {
+    background-color: rgb(231, 253, 62);
+    width:20px;
+  }
   .colorGreen {
-    background-color: gold;
+    background-color: rgb(155, 251, 0);
+    width:20px;
   }
-  
+  .colorGreen2 {
+    background-color: rgb(0, 251, 59);
+    width:20px;
+  }
   .colorSafe {
-    background-color: greenyellow;
+    background-color: rgb(13, 213, 30);
+    width:20px;
   }
   
   .colorInit {
     background-color: whitesmoke;
+    width:20px;
   }
   </style>
   
