@@ -3,6 +3,10 @@
       <h2>Sign Up</h2>
       <form @submit.prevent="signup" class="signup-form">
         <div class="form-group">
+          <label for="username">username:</label>
+          <input type="username" id="username" v-model="username" required>
+        </div>
+        <div class="form-group">
           <label for="email">Email:</label>
           <input type="email" id="email" v-model="email" required>
         </div>
@@ -46,6 +50,7 @@
         isFive: false,
         isSix: false,
         isSeven: false,
+        username:'',
         email: '',
         password: '',
         confirmPassword: ''
@@ -58,10 +63,14 @@
           console.log('密码不匹配');
           return;
         }
-        const path = 'http://127.0.0.1:5000/auth/signup'; // 修改为正确的路径
-        // 使用 Axios 或其他 HTTP 客户端库发送 POST 请求，将用户输入的邮箱和密码传递到后端
+        const path = 'http://127.0.0.1:5000/auth/signup'; 
+        // 使用 Axios 发送 POST 请求，将用户输入的用户名邮箱和密码传递到后端
         axios
-          .post(path, { email: this.email, password: this.password })
+          .post(path, { 
+            email: this.email, 
+            password: this.password, 
+            username: this.username
+          })
           .then(response => {
             // 注册成功，可以进行其他逻辑处理
             console.log('注册成功:', response.data);
