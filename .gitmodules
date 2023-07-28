@@ -1,0 +1,3 @@
+[submodule "upload_and_download/upload_and_download/documents/frontend"]
+	path = upload_and_download/upload_and_download/documents/frontend
+	url = http://github.com/Ceceliaroquee/upload_and_download_ducuments_frontend.git
