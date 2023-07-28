@@ -1,0 +1,11 @@
+flask                  2.3.2
+flask-cors             4.0.0
+flask-jwt-extended     4.5.2
+flask-sqlalchemy       3.0.5
+rsa                    4.9
+crypto                 1.4.1
+Crypto.Cipher
+Crypto.PublicKey
+Crypto.Signature
+Crypto.Hash
+CryptoJS
