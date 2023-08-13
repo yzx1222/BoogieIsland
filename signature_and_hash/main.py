@@ -62,11 +62,11 @@ def sign_data(private_key, hash_value):
         ),
         hashes.SHA256()
     )
-    with open("signature.bin", "wb") as sigfile:
+    with open("signature_sender.bin", "wb") as sigfile:
         sigfile.write(signature)
 
 def load_signature():
-    with open("signature.bin", "rb") as sigfile:
+    with open("signature_receiver.bin", "rb") as sigfile:
         signature = sigfile.read()
     return signature
 
