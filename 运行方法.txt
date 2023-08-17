@@ -1,0 +1,4 @@
+1. 在server目录下运行flask run，运行成功后会有一个本地地址，在浏览器中打开地址
+（注：根目录不能访问，要在地址后加”/fapi/files“）
+
+2. 在client目录下运行npm run serve
